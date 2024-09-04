@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Bradley Gyemi's personal website package.
+                                  If you are looking for a personal website to help you
+                                  find a job, build your network, or elevate your online
+                                  first impression, then you are in the right place.
+                                  I create custom, high quality websites which separate
+                                  you from the competition for an exceptionally low price.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="author" content="Bradley Gyemi">
+<meta name="keywords" content="Gyemi, Software, JavaScript">
+<meta property="og:title" content="Personal Site Package" />
+<meta property="og:url" content="https://bradgyemi.com" />
+<meta property="og:image" content="img/profilePic.png" />
+
+<title>Personal Package Form</title>
+
+<!-- STYLES -->
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="../css/plugins.css" />
+<link rel="stylesheet" type="text/css" href="../css/colors.css" />
+<link rel="stylesheet" type="text/css" href="../css/darkMode.css" />
+<link rel="stylesheet" type="text/css" href="../css/rtl.css" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
+<!-- /STYLES -->
+
+<script
+    src="https://www.paypal.com/sdk/js?client-id=AZrKeXInHV4xqCBIsmcyrIHYS-aLQh3piHsLX-3WYbC9DjLJw5lx7VB6ulVHQqfvEZ3JGGlWqlVXl9u_&currency=CAD"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
+</script>
+
+<script>
+	function proceedToggle() {
+		var paypalShowing = $('#submit_personal_form').hasClass('showPaypal');
+		if(!paypalShowing){
+      var isValid = $('#f1')[0].checkValidity();
+      if(isValid){
+        console.log("SHOW PAYPAL");
+  			$('#smart-button-container').show(500);
+  			$('input').attr('readonly', true);
+  			$('textarea').attr('readonly', true);
+        $('input').css('border', '3px solid red');
+  			$('textarea').css('border', '3px solid red');
+  			$('#submit_personal_form').html("<a><span>Edit Information &#128274;</span></a>");
+  			$('#submit_personal_form').addClass("showPaypal");
+      } else {alert("\n Please finish filling out all form fields before proceeding. \n \n If you have questions then please send me an email at contact@bradgyemi.com"); }
+    } else {
+			console.log("ENTER NEW MODE");
+				$('#smart-button-container').hide(500);
+				$('input').attr('readonly', false);
+				$('textarea').attr('readonly',false);
+        $('input').css('border', '2px solid white');
+  			$('textarea').css('border', '2px solid white');
+				$('#submit_personal_form').html("<a><span>Proceed &#128395;</span></a>");
+				$('#submit_personal_form').removeClass("showPaypal");
+		}
+	}
+</script>
+
+
+<style>
+	#smart-button-container{
+		background-color: #FFF;
+		padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+		margin-top: 80px;
+		border-radius: 40px;
+    display: none;
+	}
+
+  .back-from-form a{
+  	text-decoration: none;
+  	color: #000;
+  	background-color: #FFF;
+  	padding: 13px 50px;
+  	display: inline-block;
+  	border-radius: 50px;
+  	border: 2px solid #FFF;
+  	cursor: pointer;
+
+  	-webkit-transition: all .3s ease;
+  	   -moz-transition: all .3s ease;
+  	    -ms-transition: all .3s ease;
+  	     -o-transition: all .3s ease;
+  	        transition: all .3s ease;
+  }
+
+  .back-from-form a:hover{
+  	background-color: #000;
+  	color: #FFF;
+  }
+
+  .empty_notice{
+  	color: #F52225;
+  	margin-bottom: 7px;
+  	display: none;
+  	text-align: left;
+  	font-weight: 500;
+  }
+
+  .returnmessage{
+  	color:#3A00FF;
+  	margin-bottom: 7px;
+  	text-align: left;
+  	font-weight: 500;
+  }
+
+	.cursor-outer{
+		display: none;
+	}
+	.cursor-inner{
+		display: none;
+	}
+
+</style>
+
+</head>
+
+<body> <!-- FOR DARK MODE: Add class "dark" Example: <body class="dark">  FOR RTL MODE: Add class "rtl" Example: <body class="rtl"> -->
+
+	<!-- PRELOADER -->
+	<div class="waxon_tm_preloader">
+		<div class="spinner_wrap">
+			<div class="spinner"></div>
+		</div>
+	</div>
+	<!-- /PRELOADER -->
+
+<!-- WRAPPER ALL -->
+<div class="waxon_tm_all_wrap" data-magic-cursor="" data-color="black">
+
+	<!-- MAGIC CURSOR VALUES: "", hide -->
+	<!-- COLOR VALUES: blue, green, brown, pink, orange, black, white, purple, sky, cadetBlue, crimson, olive, red -->
+
+	<!-- TOPBAR -->
+	<div class="waxon_tm_topbar extra">
+		<div class="container">
+			<div class="topbar_inner">
+				<div class="logo">
+					<a href="#">
+						<img class="light" src="../img/logo.png" alt="" />
+						<img class="dark" src="../img/logo.png" alt="" />
+					</a>
+				</div>
+				<div class="menu">
+					<div class="links">
+						<ul class="anchor_nav">
+							<li>
+								<a href="../index.html">
+									<span class="first">Home</span>
+									<span class="second">Home</span>
+								</a>
+							</li>
+							<li>
+								<a href="../index.html#about">
+									<span class="first">About</span>
+									<span class="second">About</span>
+								</a>
+							</li>
+							<li>
+								<a href="../index.html#portfolio">
+									<span class="first">Experience</span>
+									<span class="second">Experience</span>
+								</a>
+							</li>
+							<li>
+								<a href="../index.html#news">
+									<span class="first">Recognition</span>
+									<span class="second">Recognition</span>
+								</a>
+							</li>
+							<li>
+								<a href="../index.html#contact">
+									<span class="first">Contact</span>
+									<span class="second">Contact</span>
+								</a>
+							</li>
+							<li>
+								<a href="../services.html">
+									<span class="first">Services</span>
+									<span class="second">Services</span>
+							  </a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /TOPBAR -->
+
+	<!-- MOBILE MENU -->
+	<div class="waxon_tm_mobile_menu">
+		<div class="topbar_inner">
+			<div class="container bigger">
+				<div class="topbar_in">
+					<div class="logo">
+						<a href="#"><img src="img/logo.png" alt="" /></a>
+					</div>
+					<div class="my_trigger">
+						<div class="hamburger hamburger--collapse-r">
+							<div class="hamburger-box">
+								<div class="hamburger-inner"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dropdown">
+			<div class="container">
+				<div class="dropdown_inner">
+					<ul class="anchor_nav">
+						<li><a href="../index.html#home">Home</a></li>
+						<li><a href="../index.html#about">About</a></li>
+						<li><a href="../index.html#portfolio">Portfolio</a></li>
+						<li><a href="../index.html#news">News</a></li>
+						<li><a href="../index.html#contact">Contact</a></li>
+						<li><a href="../services.html">Services</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /MOBILE MENU -->
+
+	<div class="waxon_tm_news_page">
+		<div class="container" >
+			<!-- Floating Form -->
+		  <div class="floating-form" id='form1'>
+		    <form class="form-inner" id="f1" action="../index.html" method="post">
+		      <h5>Personal Site Form</h5>
+					<div class="returnmessage" data-success="Thank you for choosing my services. You'll be happy you did."></div>
+					<div class="empty_notice"><span>Please Fill Required Fields</span></div>
+		      <div class="form-item">
+		        <label for="fullName"> Full Name: </label>
+		        <input type="text" id="fullName" name="fullName" placeholder="enter name" required> </input>
+		      </div>
+		      <div class="form-item">
+		        <label for="phoneNum"> Phone Number: </label>
+		        <input type="tel" id="phoneNum" name="phoneNum" placeholder="(xx) xxx xx xx" required> </input>
+		      </div>
+					<div class="form-item">
+						<label for="Email"> Professional Email: </label>
+		        <input type="email" id="emailAddy" name="emailAddy" placeholder="enter email" required> </input>
+					</div>
+		      <div class="form-item">
+		        <label for="Field/Job Title"> Field/Job Title: </label>
+		        <input type="text" id="jobTitle" name="jobTitle" placeholder="enter your field/title" required> </input>
+		      </div>
+					<div class="form-item">
+		        <label for="cvFile"> CV/Resume in PDF: </label>
+		        <input type="file" id="cvFile" name="cvFile" required>  </input>
+		      </div>
+					<div class="form-item" >
+		        <label for="imageFile" style="width: 100%"> 2 Photos Of You (about 1900px by 1080px): </label>
+            <br>
+		        <input type="file" id="imageFile1" name="imageFile1" required>  </input>
+            <input type="file" id="imageFile2" name="imageFile2" required>  </input>
+		      </div>
+		      <div class="form-item">
+		        <label for="Introduction"> Introduction: </label>
+		        <textarea  form="f1" id="intro" name="intro" placeholder="Introduce yourself in 3-5 sentences" required></textarea>
+		      </div>
+		      <div class="form-item">
+		        <label for="Value"> Qualities: </label>
+		        <textarea form="f1" id="qualities" name="qualities" placeholder="Name 3-4 positive traits and give 1-2 sentences explaining each one." required></textarea>
+		      </div>
+		      <div class="form-item">
+		        <label for="Skills"> Skills: </label>
+		        <textarea form="f1" id="skills" name="skills" placeholder="List 3-4 skills which are relevent in your field and give 1-2 sentences each"></textarea>
+		      </div>
+		      <div class="form-item">
+		        <label for="workXP"> Work Experience: </label>
+		        <textarea form="f1" id="workXP" name="workXP" placeholder="Give 3 jobs. For each job, give job title, company name, and link to company website" required></textarea>
+		      </div>
+		      <div class="form-item">
+		        <label for="education"> Education: </label>
+		        <textarea form="f1" id="education" name="education" placeholder="School name, degree title, degree level (example bachelor)" required></textarea>
+		      </div>
+					<div class="form-item">
+		        <label for="Anything"> Anything Else: </label>
+		        <textarea form="f1" id="anything" name="anything" placeholder="What else do you want to present through your personal site?" required></textarea>
+		      </div>
+					<div class="form-buttons">
+						<div class="back-from-form">
+							<a href="../packages/personal.html">
+								<span>Go Back</span>
+							</a>
+						</div>
+						<div class="back-from-form" id="submit_personal_form" onclick="proceedToggle()">
+							<a>
+								<span>Proceed &#128395;</span>
+							</a>
+						</div>
+					</div>
+					<div id="smart-button-container">
+					  <div style="text-align: center;">
+					    <div id="paypal-button-container"></div>
+					  </div>
+					</div>
+		    </form>
+		  </div>
+		</div>
+	</div>
+
+	<!-- COPYRIGHT -->
+	<div class="waxon_tm_copyright">
+		<div class="container">
+			<div class="copyright_inner">
+				<ul>
+					<li class="wow fadeInDown" data-wow-duration="0.8s">
+						<span>BRADLEY GYEMI</span>
+						<span>LOOKING FOR WORK</span>
+					</li>
+					<li class="wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.2s">
+						<span>637 Griffith St,</span>
+						<span>London, Ontario, Canada</span>
+					</li>
+					<li class="wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.4s">
+						<span>brad@regularsandco.com</span>
+						<span>+1 (615) 393-1229</span>
+					</li>
+					<li class="wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.6s">
+						<span> THANK YOU FOR VISITING </span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /COPYRIGHT -->
+
+
+
+	<!-- CURSOR -->
+	<div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+	<!-- /CURSOR -->
+
+</div>
+<!-- / WRAPPER ALL -->
+
+<!-- SCRIPTS -->
+<script src="../js/jquery.js"></script>
+<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
+<script src="../js/plugins.js"></script>
+
+ <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&callback=initMap">
+        </script>
+<script src="../js/init.js"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AaOHmaDKwWOyHM-UfIHntVtqqMhRY4fqWb_6twykmCcgqpe0eB1VPllT9uoIMGjF9ZK7-7BStqe5Jc1q&currency=CAD" data-sdk-integration-source="button-factory"></script>
+
+<script>
+	function initPayPalButton() {
+		paypal.Buttons({
+			style: {
+				shape: 'pill',
+				color: 'white',
+				layout: 'vertical',
+				label: 'pay',
+
+			},
+
+			createOrder: function(data, actions) {
+				return actions.order.create({
+					purchase_units: [{"description":"Personal Site Package","amount":{"currency_code":"CAD","value":102.00,"breakdown":{"item_total":{"currency_code":"CAD","value":100.00},"shipping":{"currency_code":"CAD","value":0.00},"tax_total":{"currency_code":"CAD","value":2.00}}}}]
+				});
+			},
+
+			onApprove: function(data, actions) {
+				return actions.order.capture().then(function(details) {
+          place_order();
+					alert('Transaction completed by ' + details.payer.name.given_name + '!');
+				});
+			},
+
+			onError: function(err) {
+				console.log(err);
+			}
+		}).render('#paypal-button-container');
+	}
+	initPayPalButton();
+</script>
+<!-- /SCRIPTS -->
+
+</body>
+</html>
