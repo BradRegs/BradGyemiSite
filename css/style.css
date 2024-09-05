@@ -450,6 +450,7 @@ img.svg{
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	border-radius: 10px;
 }
 .waxon_tm_hero .background .myOverlay{
 	position:absolute;
@@ -485,7 +486,7 @@ img.svg{
 	line-height: 1.1;
 }
 .waxon_tm_hero .content_inner h3.stroke{
-	-webkit-text-stroke: 1px #000;
+	-webkit-text-stroke: 3px #000;
 	color: transparent;
 }
 .waxon_tm_hero .content_inner span{
@@ -493,8 +494,7 @@ img.svg{
 	font-weight: 600;
 	display: inline-block;
 	padding-top: 10px;
-	color: #FFF;
-	-webkit-text-stroke: 1px #000;
+	color: #000;
 }
 .waxon_tm_down{
 	position: absolute;
@@ -624,7 +624,7 @@ img.svg{
 	font-weight: 900;
 	opacity: .1;
 	line-height: 0;
-	-webkit-text-stroke: 1px #000;
+	-webkit-text-stroke: 3px #000;
 	-webkit-user-select: none;
 }
 .waxon_tm_about .name span{
@@ -800,7 +800,7 @@ img.svg{
 	font-weight: 900;
 	opacity: .1;
 	line-height: 0;
-	-webkit-text-stroke: 1px #000;
+	-webkit-text-stroke: 3px #000;
 	-webkit-user-select: none;
 }
 .waxon_tm_portoflio .portfolio_filter{
@@ -1007,12 +1007,14 @@ img.svg{
 	margin-bottom: 20px;
 	border-radius: 8px;
 	overflow: hidden;
+	border-radius: 10px;
 }
 .waxon_tm_portoflio .portfolio_inner ul li .list_inner .image img{
 	min-width: 100%;
 	margin-bottom: 30px;
 	overflow: hidden;
 	visibility: hidden;
+	border-radius: 10px;
 }
 
 .waxon_tm_portoflio .portfolio_inner ul li .list_inner .image:hover img{
@@ -1022,7 +1024,7 @@ img.svg{
 
 .waxon_tm_portoflio .portfolio_inner ul li .list_inner .image .main{
 	position: absolute;
-	top: -20px;
+	top: 10px;
 	bottom: 20px;
 	left: 0px;
 	right: 0px;
@@ -1038,6 +1040,7 @@ img.svg{
 	    -ms-transition: all .3s ease;
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
+					border-radius: 10px;
 }
 .waxon_tm_portoflio .portfolio_inner ul li .list_inner .image:hover .main{
 	transform: scale(1.1) translateZ(0);
@@ -1127,6 +1130,11 @@ img.svg{
     border: 2px solid #eee;
 		margin-top: 50px;
 }
+
+.waxon_tm_partners .partners_inner .list_inner img{
+	border-radius: 10px;
+}
+
 .waxon_tm_partners ul.light{display: none;}
 .waxon_tm_partners ul.dark{display: block;}
 body.dark .waxon_tm_partners ul.light{display: block;}
@@ -2020,6 +2028,7 @@ body.dark .waxon_tm_partners ul.dark{display: none;}
 .waxon_tm_news_page .extra_images ul li .list_inner img{
 	min-width: 100%;
 	opacity: 0;
+	border-radius: 10px;
 }
 .waxon_tm_news_page .extra_images ul li .list_inner .main{
 	position: absolute;
@@ -2671,6 +2680,10 @@ body.dark .waxon_tm_partners ul.dark{display: none;}
 	text-align: center;
 	font-size: 30px;
 	margin-bottom: 70px;
+}
+
+.shiftDown{
+	transform: translateY(70px);
 }
 
 /*---------------------------------------------------*/
