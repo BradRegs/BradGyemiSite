@@ -477,7 +477,7 @@ img.svg{
 	transform: translateY(-50%);
 }
 .waxon_tm_hero .content_inner h3{
-	color: #000;
+	color: #1fb622;
 	font-size: 120px;
 	font-weight: 900;
 	text-transform: uppercase;
@@ -494,7 +494,7 @@ img.svg{
 	font-weight: 600;
 	display: inline-block;
 	padding-top: 10px;
-	color: #000;
+	color: #1fb622
 }
 .waxon_tm_down{
 	position: absolute;
